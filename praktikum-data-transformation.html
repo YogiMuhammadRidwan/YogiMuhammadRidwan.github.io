@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Data Transformation</title>
+</head>
+<body>
+    <p id="display"></p>    
 
+    <script>
+        
+        const yogi = {
+            nama: "Yogi",
+            jenis_kelamin: 1,
+            perasaan: [
+                {
+                    label: "cinta",
+                    level: 99,
+                },
+                {
+                    label: "kasmaran",
+                    level: 98,
+                },
+                {
+                    label: "cemburu",
+                    level: 1000,
+                },
+            ],
+            umur: 17,
+            permen: ["kiss", "relaxa"],
+            motor: [
+                {
+                    merk: "CRF",
+                    harga: 31000000,
+                    start: function(){
+                        console.log("tutututututututu");
+                    },
+                },
+                {
+                    merk: "KTM 500",
+                    harga: 25000000,
+                    start: function(){
+                        console.log("totototototototot");
+                    },
+                },
+            ]
+        }
+
+        const muhammad = {
+            nama: "Muhammad",
+            jenis_kelamin: 2,
+            perasaan: [
+                {
+                    label: "cinta",
+                    level: -99,
+                },
+                {
+                    label: "kasmaran",
+                    level: -98,
+                },
+                {
+                    label: "terpaksa",
+                    level: -1000,
+                },
+            ],
+            umur: 17,
+            sisa_di_tempat: 1000,
+            hobi: [
+                {
+                    label: "ngoding",
+                    jam_per_hari: 12,
+                },
+                {
+                    label: "makan",
+                    jam_per_hari: 5,
+                }
+            ]
+        }
+
+        const dutaKelas = [yogi, muhammad]
+        console.log(muhammad.perasaan)
+        const arrayLevelPerasaan = muhammad.perasaan.map(function(perasaanMuhammad, urutanKe){
+            return perasaanMuhammad.level
+        })
+        console.log(arrayLevelPerasaan)
+        const arrayLabelPerasaan = muhammad.perasaan.map(function(perasaanMuhammad, urutanKe){
+            return perasaanMuhammad.label
+        })
+        console.log(arrayLabelPerasaan)
+        
+    </script>
+</body>
+</html>
